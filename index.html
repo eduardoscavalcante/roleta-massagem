@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roleta de Massagem</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <h1>Douglas Massoterapeuta</h1>
+  <h2>A roleta da sua massagem</h2>
+
+  <canvas id="canvas" width="500" height="500"></canvas>
+  <div>
+    <button class="neutral-button" id="spin">GIRAR</button>
+    <div id="editText">editar</div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Modal Resultado -->
+  <div class="modal" id="winnerModal" role="dialog" aria-modal="true" aria-labelledby="winnerText">
+    <h1 id="winnerText">Resultado</h1>
+    <button id="closeWinner" aria-label="Fechar resultado">Fechar</button>
+  </div>
+
+  <!-- Modal Editar -->
+  <div class="modal" id="editModal" role="dialog" aria-modal="true" aria-labelledby="editTitle">
+    <h2 id="editTitle">Editar prêmios</h2>
+    <div id="editList"></div>
+    <button class="neutral-button" id="addOption">Adicionar</button>
+    <button class="neutral-button" id="saveOptions">Salvar</button>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
