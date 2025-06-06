@@ -1,0 +1,217 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background-color: #f8f5f2;
+  padding: 20px;
+  margin: 0;
+  color: #4a4a4a;
+}
+h1 {
+  font-size: 28px;
+  margin: 0;
+  font-weight: 700;
+}
+h2 {
+  font-size: 20px;
+  color: #7a7a7a;
+  margin: 5px 0 20px;
+  font-weight: 400;
+}
+#canvas {
+  margin: 20px auto;
+  display: block;
+  touch-action: none;
+  max-width: 100%;
+  height: auto;
+}
+.neutral-button {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 15px 30px;
+  background: #d9cfc1;
+  color: #4a4a4a;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: background 0.3s ease;
+  user-select: none;
+}
+.neutral-button:hover {
+  background: #c4b8a6;
+}
+/* Texto "Editar" discreto */
+#editText {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #7a7a7a;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: underline;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+#editText:hover {
+  color: #4a4a4a;
+}
+
+/* Modal e Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.35);
+  display: none;
+  z-index: 999;
+}
+.overlay.active {
+  display: block;
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff9f5;
+  padding: 30px 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 1000;
+  max-width: 400px;
+  width: 90%;
+  box-sizing: border-box;
+  text-align: center;
+  user-select: none;
+}
+.modal.active {
+  display: block;
+}
+
+/* Modal Resultado */
+#winnerModal h1 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  line-height: 1.2;
+  user-select: text;
+}
+
+#closeWinner {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 15px 30px;
+    background: #d9cfc1;
+    color: #4a4a4a;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: background 0.3s ease;
+    user-select: none;
+}
+#closeWinner:hover {
+    background: #c4b8a6;
+}
+
+/* Modal Editar */
+#editModal h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 15px;
+  user-select: none;
+}
+#editList div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#editList input {
+  flex-grow: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #4a4a4a;
+  user-select: text;
+}
+.remove-button {
+  margin-left: 10px;
+  background: transparent;
+  border: none;
+  color: #999;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s;
+  user-select: none;
+  line-height: 1;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.remove-button:hover {
+  color: #c0392b;
+}
+#addOption, #saveOptions {
+  margin: 10px 8px 0 0;
+  font-size: 15px;
+  padding: 12px 26px;
+  border-radius: 25px;
+  user-select: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #canvas {
+    width: 350px;
+    height: 350px;
+  }
+  .neutral-button {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  #canvas {
+    width: 280px;
+    height: 280px;
+  }
+  .neutral-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  #editText {
+    font-size: 13px;
+  }
+  .modal {
+    max-width: 90%;
+    padding: 20px 25px;
+  }
+  #winnerModal h1 {
+    font-size: 20px;
+  }
+  #closeWinner {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+}
